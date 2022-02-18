@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Admin</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<style>
+
+    body
+    {
+    margin:0;
+    padding:0;
+    font-family:san-serif;
+    background-image:url(https://t3.ftcdn.net/jpg/01/22/71/96/360_F_122719641_V0yw2cAOrfxsON3HeWi2Sf4iVxhv27QO.jpg);
+    background-repeat: no-repeat;
+    background-size: 1600px 800px;
+     }
+     .login-box
+     {
+     width:350px;
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform:translate(-50%,-50%);
+     color:black;
+     }
+     .login-box h1
+     {
+     float:left;
+     font-size:50px;
+     margin-bottom:50px;
+     padding:13px 0;
+     }
+     .text-box
+     {
+     width:100%;
+     overflow:hidden;
+     font-size:20px;
+     padding:8px 0;
+     margin:8px 0;
+     border-bottom:1px solid white;
+     }
+     .text-box i
+     {
+     width:26px;
+     float:left;
+     text-align:center;
+     
+     }
+     
+     
+     .text-box input
+     {
+     border:none;
+     outline:none;
+     background:none;
+     color:black;
+     font-size:18px;
+     width:80%;
+     float:left;
+     margin: 4 10px;
+     }
+     .btn
+     {
+     width:100%;
+     background:none;
+     border:2px solid black;
+     color:black;
+     padding:5px;
+     font-size:18px;
+     cursor:pointer;
+     margin:12px 0;
+     
+     }
+    
+    
+    
+</style>
+
+    </head>
+    <body>
+    <form action="#" th:action="@{/adminlogin}" th:object="${user}" method="post">
+
+    
+    <div class="login-box">
+    <h1>Admin</h1>
+    
+    <div class="text-box">
+    <i class="fa fa-user icon"></i>
+    <input type="text"  placeholder="Username" id="myinput" th:field="*{username}" class="form-control" />
+    </div>
+    <div class="text-box">
+    <i class="fa fa-lock icon"></i>
+   
+    <input type="password" placeholder="Password" th:field="*{password}" class="form-control" />
+    
+    </div>
+    <input button type="submit" class="btn btn-info" value="Login">
+    
+    </div>
+   
+    
+       
+</form>
+
+    
+			          
+</body>
+</html>

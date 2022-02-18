@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html >
+ 
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<style>
+body
+{
+padding: 100px;
+  background-image: url(https://dynamic.placementindia.com/blog_images/20210330112333_image1.jpg);
+  background-repeat: no-repeat;
+  background-size: 1600px 770px;
+}
+.reg h1
+{
+font-family:'Times New Roman';
+font-size:60px;
+color:white;
+}
+.btn input
+{
+width:145px;
+height:40px;
+background:steelblue;
+border:none;
+margin-bottom:10px;
+margin-left:20px;
+font-size:18px;
+border-radius:20px;
+}
+</style>
+</head>
+
+<body>
+<div class=reg>
+	<h1><center>Placement Registration</center></h1>
+	<tr>
+		<div class="btn" align = "left" >
+		<h3><a th:href="@{'/placementnew'}"><input type="submit" class="btn btn-info" value="Addnew" /></a>		   
+		 <a  th:href="@{'/adminindex'}"><input type="submit" class="btn btn-info" value="Home" /></a></h3>    
+	    </div>
+	
+	</tr>
+	<tr>
+	
+	<div class="col-sm-7" align = "center">
+                 <div class="panel-body" align = "center" >
+                 <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      		<th>ID</th>
+            <th>Name</th>
+            <th>College</th>
+            <th>Date</th>
+            <th>Qualification</th>
+            <th>Year</th>
+            <th>Edit</th>
+            <th>Delete</th>
+   	</tr>
+  </thead>
+  <tbody>
+      <tr  th:each="placement : ${listplacement }">
+		<td th:text="${placement.id}">ID</td>
+		<td th:text="${placement.name}">Name</td>		
+		<td th:text="${placement.college}">College</td>
+		<td th:text="${placement.date}">Date</td>	
+		<td th:text="${placement.qualification}">Qualification</td>	
+		<td th:text="${placement.year}">Year</td>			
+		<td><a th:href="@{'/edit/' + ${placement.id}}"style="color:deeppink">Edit</a>
+		</td>							    
+		<td><a th:href="@{'/delete/' + ${placement.id}}"style="color:deeppink">Delete</a>
+		</td>		    
+		</tr> 
+   
+  </tbody>
+</table>
+                    
+                 </div>
+ 
+            </div> 
+ 
+	</tr>
+ 
+	</tbody>
+	</table>
+	
+</body>
+</html>

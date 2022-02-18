@@ -1,0 +1,214 @@
+@charset "ISO-8859-1";
+/* Website template by freewebsitetemplates.com */
+html {
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	background-color: #0c2635; 
+	margin: 0;
+}
+img {
+	border: 0;
+}
+
+.menu-bar{
+	background:transparent;
+	text-align:right;
+}
+.menu-bar ul{
+	display:inline-flex;
+	list-style:none;
+	color:black;
+}
+.menu-bar ul li{
+	width:120px;
+	margin:15px;
+	padding:15px;
+}
+.menu-bar ul li a{
+	text-decoration:none;
+	color:white;
+}
+.active,.menu-bar ul li:hover{
+	background:orangered;
+	border-radius:3px;
+}
+#header {
+	width: 960px;
+	margin: 0 auto;
+	padding: 40px 0;
+	position: relative;
+}
+#headertag {
+	color:white;
+}
+
+
+#adbox {
+	background-color: #ffffff;
+	height: 340px;
+	padding: 20px 0 0;
+}
+#adbox p {
+	margin: 0;
+}
+#adbox .body {
+	width: 960px;
+	margin: 0 auto 0;
+}
+#adbox div.images {
+	float: right;
+	display: inline-block;
+	height: 281px;
+	width: 710px;
+	overflow: hidden;
+}
+#adbox div.images img.preview {
+	float: left;
+	margin-right: 2px;
+}
+#adbox div.images img.last {
+	position: relative;
+	top: -2px;
+}
+#adbox .details {
+	color: #2f2f2f;
+	height: 200px;
+	width: 200px;
+	padding: 40px 20px 40px 10px;
+}
+#adbox .details p {
+	color: #646c6f;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: justify;
+}
+#adbox .details p span {
+	color: #073f5a;
+	display: block;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 0 0 20px;
+	text-align: center;
+}
+#adbox .details p span a {
+	color: #073f5a;
+	font-weight: bold;
+	text-decoration: none;
+}
+#adbox .footer {
+	height: 46px;
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+#adbox div.footer ul {
+	background-color: #dcdcdc;
+	display: inline-block;
+	width: 960px;
+	list-style: none;
+	margin: 0 auto;
+	border-radius: 3px;
+	padding: 0;
+	position: absolute;
+	bottom: -80px;
+}
+#adbox div.footer ul li {
+	float: left;
+	width: 280px;
+	padding: 20px 20px 18px;
+}
+#adbox div.footer ul li img {
+	float: left;
+	margin-right: 10px;
+}
+#adbox div.footer ul li p {
+	color: #363636;
+	font-size: 14px;
+	height: 88px;
+	line-height: 20px;
+	margin: 0;
+}
+#adbox div.footer ul li p a {
+	color: #010101;
+	font-weight: bold;
+	text-decoration: none;
+}
+#adbox div.footer ul li.selected {
+	background-color: #e9f1f4;
+	border-radius: 3px;
+}
+#adbox div.footer ul li.selected p, #adbox div.footer ul li.selected p a {
+	color: #5c6164;
+}
+#adbox div.footer span.bottom-shadow {
+	background: url(../images/bottom-shadow.gif) no-repeat left top;
+	display: block;
+	height: 20px;
+	width: 960px;
+	position: absolute;
+	bottom: -100px;
+}
+
+#contents {
+	background: url(../images/bg-content.gif) repeat;
+	padding: 40px 0 20px;
+}
+#contents div.body {
+	color: #fdfffa;
+	width: 960px;
+	margin: 0 auto 20px;
+	padding-top: 20px;
+}
+
+
+#footer {
+	color: #456f7f;
+	line-height: 20px;
+	width: 940px;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+
+#footer ul.contacts {
+	float: left;
+	font-size: 12px;
+	list-style: none;
+	width: 300px;
+	margin: 0;
+	padding: 0 0 10px;
+	color: white;
+}
+#footer ul.contacts h3 {
+	font-size: 14px;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+}
+#footer ul.contacts li span {
+	float: left;
+	width: 50px;
+}
+#footer ul.contacts li p {
+	margin: 0 0 0 50px;
+}
+
+#footer ul.contacts li span {
+	float: left;
+	width: 50px;
+}
+#footer ul.contacts li p {
+	float: left;
+	width: 250px;
+	margin: 0;
+}
+
+
+
+#footer span.footnote {
+	clear: both;
+	display: block;
+	font-size: 12px;
+	margin: 40px 0 0;
+	text-align: center;
+}
+

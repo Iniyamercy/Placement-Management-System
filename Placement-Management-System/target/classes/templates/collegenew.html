@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<style>
+body
+{
+ padding:100px;
+ background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://media.istockphoto.com/photos/harvard-moors-hall-picture-id539018603?k=20&m=539018603&s=612x612&w=0&h=huD6bm6_kN_NPRVMKs70u8asfZzbrgs3NpDc2ngtkM4=);
+ background-repeat:no-repeat;
+ background-size:cover;
+}
+.login-box h1
+{
+font-family:'Times New Roman';
+font-size:60px;
+color:white;
+}
+.coll input
+{
+width:160px;
+height:40px;
+background:darkseagreen;
+border:none;
+margin-bottom:10px;
+margin-left:20px;
+font-size:18px;
+border-radius:20px;
+}
+.text-box
+{
+width:60%;
+font-color:white;
+font-size:20px;
+padding:8px 0;
+margin:5px 0;
+border-bottom:4px solid lightgreen;
+
+
+}
+.text-box input
+{
+border:white;
+outline:none;
+color:white;
+background:white;
+font-size:18px;
+}
+
+.design label
+{
+color:white;
+font-size:20px;
+}
+
+</style>
+<body>
+<div  class="login-box" align="center">
+<h1>Create New College Data</h1><br>
+   
+ <div  class="coll" align = "center" >		   
+		     <h3><a th:href="@{'/collegeindex'}"><input type="submit" class="btn btn-info" value="CollegeData" /></a></h3>     
+	    </div>
+	    <div class="col-sm-4">
+    <form action="#" th:action="@{/savecollege}" th:object="${college}" method="post" >
+ 
+	    <div class="design">
+	    <label><b>CollegeName</b></label>
+	     <div class="text-box">
+	     <input type="hidden" th:field="*{id}" />
+	     <input type="text"  placeholder="CollegeName" th:field="*{collegename}" class="form-control"  />
+	     </div> 
+	     <label><b>Location</b></label>
+	     <div class="text-box">
+	     <input type="text"  placeholder="Collegelocation" th:field="*{collegelocation}" class="form-control"  />
+	     </div>
+	     <label><b>Admin</b></label> 
+	     <div class="text-box">
+	     <input type="text"  placeholder="Collegeadmin" th:field="*{collegeadmin}" class="form-control" />
+	     </div>
+	     <label><b>Email</b></label> 
+	     <div class="text-box">
+	     <input type="text"  placeholder="Collegeemail" th:field="*{collegeemail}" class="form-control" />
+	     </div> 
+	     </div>
+	      <input button type="submit" class="btn btn-info" value="Save">
+	</form>
+	</div>	
+</div>
+</body>
+</html>

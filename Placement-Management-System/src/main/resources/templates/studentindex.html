@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html >
+ 
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<style>
+body
+{
+padding: 100px;
+  background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(https://c1.wallpaperflare.com/preview/294/960/948/university-student-graduation-photo-hats.jpg);
+  background-repeat: no-repeat;
+  background-size: 1550px 770px;
+}
+.student h1
+{
+font-family:'Times New Roman';
+font-size:60px;
+color:white;
+}
+.btn input
+{
+width:145px;
+height:40px;
+background:dodgerblue;
+border:none;
+margin-bottom:10px;
+margin-left:20px;
+font-size:18px;
+border-radius:20px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="student">
+	<h1><center>Student Registration</center></h1>
+	<tr>
+		<div  class="btn" align = "left" >		   
+		     <h3><a  th:href="@{'/newstudent'}"><input type="submit" class="btn btn-info" value="Addnew"></a>
+		     <a  th:href="@{'/adminindex'}"><input type="submit" class="btn btn-info" value="Home"></a></h3>     
+	    </div>
+	
+	</tr>
+	<tr>
+	
+	<div class="col-sm-5" align = "center">
+                 <div class="panel-body" align = "center" >
+                 <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      		<th>Student ID</th>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Percentage(%)</th>
+            <th>Mailid</th>
+            <th>College</th>
+            <th>Roll</th>
+            <th>Qualification</th>
+            <th>Hallticketno</th>
+            <th>Edit</th>
+            <th>Delete</th>
+   	</tr>
+  </thead>
+  <tbody>
+      <tr  th:each="student : ${liststudent }">
+		<td th:text="${student.id}" style="color:white">Student ID</td>
+		<td th:text="${student.studentname}" style="color:white">Student Name</td>
+		<td th:text="${student.course}" style="color:white">Course</td>
+		<td th:text="${student.percentage}" style="color:white">Percentage%</td>
+		<td th:text="${student.mailid}" style="color:white">Mailid</td>		
+		<td th:text="${student.college}" style="color:white">College</td>	
+		<td th:text="${student.roll}" style="color:white">Roll</td>	
+		<td th:text="${student.qualification}" style="color:white">Qualification</td>	
+		<td th:text="${student.hallticketno}" style="color:white">Hallticketno</td>			
+		<td>
+			<a th:href="@{'/editstudent/' + ${student.id}}" style="color:yellowgreen"><b>Edit</b></a>
+		</td>							    
+		<td>
+			<a th:href="@{'/deletestudent/' + ${student.id}}" style="color:yellowgreen"><b>Delete</b></a>
+		</td>		    
+		</tr> 
+   
+  </tbody>
+</table>
+                    
+                 </div>
+ 
+            </div> 
+ 
+	</tr>
+ 
+	</tbody>
+	</table>
+	<div>
+</body>
+</html>
